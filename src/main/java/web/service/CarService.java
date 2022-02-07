@@ -19,9 +19,9 @@ public class CarService {
         if ((count == null) || (count > 5)) {
             count = 5;
         }
-        List<Car> array = carList.stream().limit(count)
+        List<Car> listCar = carList.stream().limit(count)
                 .collect(Collectors.toList());
 
-        return array;
+        return listCar;
     }
 }
