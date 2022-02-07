@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class CarService {
 
-    public static List<Car> getCarsArray(Integer count) {
+    public static List<Car> getCarsList(Integer count) {
         List<Car> carList = new ArrayList<>();
         carList.add(new Car("model1", "series1", "country1"));
         carList.add(new Car("model2", "series2", "country2"));
@@ -19,9 +19,7 @@ public class CarService {
         if ((count == null) || (count > 5)) {
             count = 5;
         }
-        List<Car> listCar = carList.stream().limit(count)
-                .collect(Collectors.toList());
 
-        return listCar;
+        return carList.stream().limit(count).collect(Collectors.toList());
     }
 }
